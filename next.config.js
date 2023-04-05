@@ -1,4 +1,4 @@
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
@@ -7,8 +7,15 @@ const nextConfig = {
   },
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
-      "/": { page: "/" },
-      "/index.html": { page: "/" }
+      "/": { page: "/" }
     };
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/index.html",
+      },
+    ];
   },
 };
