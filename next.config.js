@@ -7,7 +7,7 @@ module.exports = {
   },
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
-      "/": { page: "/" }
+      "/": { page: "/index.html" }
     };
   },
   async rewrites() {
