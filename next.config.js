@@ -5,6 +5,9 @@ module.exports = {
   images: {
     unoptimized: true
   },
+  publicRuntimeConfig: {
+    staticFolder: '/static',
+  },
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
       "/": { page: "/index.html" }
